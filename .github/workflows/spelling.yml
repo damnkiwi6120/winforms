@@ -179,6 +179,22 @@ jobs:
             cspell1:typescript/typescript.txt
           extra_dictionaries: |
             cspell1:software-terms/softwareTerms.txt
+            cspell1:csharp/csharp.txt
+            cspell1:filetypes/filetypes.txt
+            cspell1:css/css.txt
+            cspell1:cpp/compiler-msvc.txt
+            cspell1:aws/aws.txt
+            cspell1:cpp/stdlib-cpp.txt
+            cspell1:cpp/stdlib-c.txt
+            cspell1:cryptocurrencies/cryptocurrencies.txt
+            cspell1:dotnet/dotnet.txt
+            cspell1:fullstack/fullstack.txt
+            cspell1:fonts/fonts.txt
+            cspell1:node/node.txt
+            cspell1:npm/npm.txt
+            cspell1:typescript/typescript.txt
+            cspell1:golang/go.txt
+            cspell1:python/python/python-lib.txt
 
   comment-push:
     name: Report (Push)
