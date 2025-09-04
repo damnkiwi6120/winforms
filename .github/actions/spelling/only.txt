@@ -733,6 +733,6 @@
 # (?:^|/)src/test/unit/System\.Windows\.Forms/TestResources/Files
 # (?:^|/)src/test/unit/System\.Windows\.Forms/TestResources/VB6
 # (?:^|/)src/test/util/System\.Windows\.Forms
-# (?:^|/)src/test/util/System\.Windows\.Forms/Data
+(?:^|/)src/test/util/System\.Windows\.Forms/Data
 (?:^|/)src/test/util/System\.Windows\.Forms/Properties
 (?:^|/)src/test/util/System\.Windows\.Forms/PropertyGridInternal
