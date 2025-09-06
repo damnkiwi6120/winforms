@@ -6,7 +6,7 @@ namespace System.Windows.Forms.TestUtilities;
 public static class ScrollBarTestHelper
 {
     private const int Maximum = 100;
-    private const int Minumim = 0;
+    private const int Minimum = 0;
 
     public static IEnumerable<object[]> HScrollBarAccessibleObject_FirstPageButtonIsDisplayed_TestData()
     {
@@ -14,10 +14,10 @@ public static class ScrollBarTestHelper
         {
             // Depending on orientation and RTL settings, the first button can be shown
             // or hidden when the trackbar value is at minimum or maximum.
-            int value = rightToLeft == RightToLeft.Yes ? Minumim : Maximum;
+            int value = rightToLeft == RightToLeft.Yes ? Minimum : Maximum;
 
-            yield return new object[] { rightToLeft, Minumim, Maximum, /*value*/ 50 };
-            yield return new object[] { rightToLeft, Minumim, Maximum, value };
+            yield return new object[] { rightToLeft, Minimum, Maximum, /*value*/ 50 };
+            yield return new object[] { rightToLeft, Minimum, Maximum, value };
         }
     }
 
@@ -27,9 +27,9 @@ public static class ScrollBarTestHelper
         {
             // Depending on orientation and RTL settings, the first button can be shown
             // or hidden when the trackbar value is at minimum or maximum.
-            int value = rightToLeft == RightToLeft.Yes ? Maximum : Minumim;
+            int value = rightToLeft == RightToLeft.Yes ? Maximum : Minimum;
 
-            yield return new object[] { rightToLeft, Minumim, Maximum, value };
+            yield return new object[] { rightToLeft, Minimum, Maximum, value };
         }
     }
 
@@ -39,10 +39,10 @@ public static class ScrollBarTestHelper
         {
             // Depending on orientation and RTL settings, the first button can be shown
             // or hidden when the trackbar value is at minimum or maximum.
-            int value = rightToLeft == RightToLeft.Yes ? Maximum : Minumim;
+            int value = rightToLeft == RightToLeft.Yes ? Maximum : Minimum;
 
-            yield return new object[] { rightToLeft, Minumim, Maximum, /*value*/ 50 };
-            yield return new object[] { rightToLeft, Minumim, Maximum, value };
+            yield return new object[] { rightToLeft, Minimum, Maximum, /*value*/ 50 };
+            yield return new object[] { rightToLeft, Minimum, Maximum, value };
         }
     }
 
@@ -52,9 +52,9 @@ public static class ScrollBarTestHelper
         {
             // Depending on orientation and RTL settings, the first button can be shown
             // or hidden when the trackbar value is at minimum or maximum.
-            int value = rightToLeft == RightToLeft.Yes ? Minumim : Maximum;
+            int value = rightToLeft == RightToLeft.Yes ? Minimum : Maximum;
 
-            yield return new object[] { rightToLeft, Minumim, Maximum, value };
+            yield return new object[] { rightToLeft, Minimum, Maximum, value };
         }
     }
 
@@ -62,7 +62,7 @@ public static class ScrollBarTestHelper
     {
         foreach (RightToLeft rightToLeft in new RightToLeft[] { RightToLeft.Yes, RightToLeft.No })
         {
-            yield return new object[] { rightToLeft, Minumim, Maximum, /*value*/ 50 };
+            yield return new object[] { rightToLeft, Minimum, Maximum, /*value*/ 50 };
         }
     }
 
@@ -70,7 +70,7 @@ public static class ScrollBarTestHelper
     {
         foreach (RightToLeft rightToLeft in new RightToLeft[] { RightToLeft.Yes, RightToLeft.No })
         {
-            yield return new object[] { rightToLeft, /*Minumim*/ 0, /*Maximum*/ 0, /*Value*/ 0 };
+            yield return new object[] { rightToLeft, /*Minimum*/ 0, /*Maximum*/ 0, /*Value*/ 0 };
         }
     }
 
@@ -80,10 +80,10 @@ public static class ScrollBarTestHelper
         {
             foreach (RightToLeft rightToLeft in new RightToLeft[] { RightToLeft.Yes, RightToLeft.No })
             {
-                yield return new object[] { createControl, rightToLeft, Minumim, Maximum, /*Value*/ 0 };
-                yield return new object[] { createControl, rightToLeft, Minumim, Maximum, /*Value*/ 50 };
-                yield return new object[] { createControl, rightToLeft, Minumim, Maximum, /*Value*/ 100 };
-                yield return new object[] { createControl, rightToLeft, Minumim, /*Maximum*/ 0, /*Value*/ 0 };
+                yield return new object[] { createControl, rightToLeft, Minimum, Maximum, /*Value*/ 0 };
+                yield return new object[] { createControl, rightToLeft, Minimum, Maximum, /*Value*/ 50 };
+                yield return new object[] { createControl, rightToLeft, Minimum, Maximum, /*Value*/ 100 };
+                yield return new object[] { createControl, rightToLeft, Minimum, /*Maximum*/ 0, /*Value*/ 0 };
             }
         }
     }
@@ -92,10 +92,10 @@ public static class ScrollBarTestHelper
     {
         foreach (RightToLeft rightToLeft in new RightToLeft[] { RightToLeft.Yes, RightToLeft.No })
         {
-            yield return new object[] { rightToLeft, Minumim, Maximum, /*Value*/ 0 };
-            yield return new object[] { rightToLeft, Minumim, Maximum, /*Value*/ 50 };
-            yield return new object[] { rightToLeft, Minumim, Maximum, /*Value*/ 100 };
-            yield return new object[] { rightToLeft, Minumim, /*Maximum*/ 0, /*Value*/ 0 };
+            yield return new object[] { rightToLeft, Minimum, Maximum, /*Value*/ 0 };
+            yield return new object[] { rightToLeft, Minimum, Maximum, /*Value*/ 50 };
+            yield return new object[] { rightToLeft, Minimum, Maximum, /*Value*/ 100 };
+            yield return new object[] { rightToLeft, Minimum, /*Maximum*/ 0, /*Value*/ 0 };
         }
     }
 
@@ -103,8 +103,8 @@ public static class ScrollBarTestHelper
     {
         foreach (RightToLeft rightToLeft in new RightToLeft[] { RightToLeft.Yes, RightToLeft.No })
         {
-            yield return new object[] { rightToLeft, Minumim, Maximum, /*value*/ 50 };
-            yield return new object[] { rightToLeft, Minumim, Maximum, /*value*/ Maximum };
+            yield return new object[] { rightToLeft, Minimum, Maximum, /*value*/ 50 };
+            yield return new object[] { rightToLeft, Minimum, Maximum, /*value*/ Maximum };
         }
     }
 
@@ -112,7 +112,7 @@ public static class ScrollBarTestHelper
     {
         foreach (RightToLeft rightToLeft in new RightToLeft[] { RightToLeft.Yes, RightToLeft.No })
         {
-            yield return new object[] { rightToLeft, Minumim, Maximum, /*value*/ Minumim };
+            yield return new object[] { rightToLeft, Minimum, Maximum, /*value*/ Minimum };
         }
     }
 
@@ -120,8 +120,8 @@ public static class ScrollBarTestHelper
     {
         foreach (RightToLeft rightToLeft in new RightToLeft[] { RightToLeft.Yes, RightToLeft.No })
         {
-            yield return new object[] { rightToLeft, Minumim, Maximum, /*value*/ 50 };
-            yield return new object[] { rightToLeft, Minumim, Maximum, /*value*/ Minumim };
+            yield return new object[] { rightToLeft, Minimum, Maximum, /*value*/ 50 };
+            yield return new object[] { rightToLeft, Minimum, Maximum, /*value*/ Minimum };
         }
     }
 
@@ -129,7 +129,7 @@ public static class ScrollBarTestHelper
     {
         foreach (RightToLeft rightToLeft in new RightToLeft[] { RightToLeft.Yes, RightToLeft.No })
         {
-            yield return new object[] { rightToLeft, Minumim, Maximum, /*value*/ Maximum };
+            yield return new object[] { rightToLeft, Minimum, Maximum, /*value*/ Maximum };
         }
     }
 }
